@@ -7,7 +7,11 @@
 #include "Account.h"
 
 int main() {
+	
+	Money m(10,13);
+	Account account(m);
 
+	std::cout << account << std::endl;
 	
 	
 	
