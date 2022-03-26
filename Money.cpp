@@ -5,3 +5,16 @@
 
 #include "Money.h"
 
+//default Constructor
+Money::Money(){
+
+}
+
+//Parameterized Constructor
+Money::Money(const int &dollars, const int &cents):m_dollars(dollars), m_cents(cents){
+
+std::cout << dollars << std::endl;
+
+}
+
+

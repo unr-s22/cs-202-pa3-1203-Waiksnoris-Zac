@@ -7,14 +7,16 @@
 #define CODE_ACCOUNT_H
 
 #include <iostream>
-
+#include "Money.h"
 
 class Account
 {
-
+	
 
 public:
-	
+	Account(const Money& obj);
+	void makeDeposit(const Money& obj);
+	void makeWithdrawals(const Money& obj);
  
   
 };

@@ -11,9 +11,12 @@
 
 class Money
 {
+	int m_dollars;
+	int m_cents;
 
 public:
-	
+	Money();
+	Money(const int &dollars, const int &cents);
    
 
 };
