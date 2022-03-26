@@ -7,11 +7,12 @@
 #define CODE_ACCOUNT_H
 
 #include <iostream>
+#include <vector>
 #include "Money.h"
 
 class Account
 {
-	
+	std::vector<Money> money;
 
 public:
 	Account(const Money& obj);
