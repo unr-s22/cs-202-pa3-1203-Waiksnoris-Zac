@@ -25,6 +25,7 @@ void Account::makeWithdrawals(const Money& obj){
 
 
 }
+//Need to find where to place this
 void Account::checkBal(){
 	for(i=0;numDeposit != i; i++){
 		money[0] = money[0] - withdraw[i];

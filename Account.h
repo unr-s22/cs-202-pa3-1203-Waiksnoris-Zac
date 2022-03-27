@@ -36,7 +36,7 @@ public:
 	  friend std::ostream &operator<<(std::ostream &os, const Account &account){
    		os << "Account Details" << std::endl
    		<< "--------------------------" << std::endl
-   		<< "Current Balance:" << account.money[0] << std::endl
+   		<< "Current Balance: " << account.money[0] << std::endl
    		<< "--------------------------" << std::endl
    		<< "Number of Deposits: "<< account.numDeposit << std::endl
    		<<"-------------------"<< std::endl;
