@@ -21,30 +21,30 @@ public:
 	Money(const int &dollars, const int &cents);
    	
    	//Relational Overloads
-   	bool operator<(const Money& rhs) const{
+   	bool operator<(const Money &rhs) const{
    		return all_cents < rhs.all_cents;
    	}
-   	bool operator>(const Money& rhs) const{
+   	bool operator>(const Money &rhs) const{
    		return all_cents > rhs.all_cents;
    	}
-   	bool operator<=(const Money& rhs) const{
+   	bool operator<=(const Money &rhs) const{
    		return all_cents <= rhs.all_cents;
    	}
-	bool operator>=(const Money& rhs) const{
+	bool operator>=(const Money &rhs) const{
    		return all_cents >= rhs.all_cents;
    	}
-   	bool operator!=(const Money& rhs) const{
+   	bool operator!=(const Money &rhs) const{
    		return all_cents != rhs.all_cents;
    	}
-   	bool operator==(const Money& rhs) const{
+   	bool operator==(const Money &rhs) const{
    		return all_cents == rhs.all_cents;
    	}
    	
    	//Math Overloads
-   	bool operator+(const Money& rhs) const{
+   	bool operator+(const Money &rhs) const{
    		return all_cents + rhs.all_cents;
    	}
-   	bool operator-(const Money& rhs) const{
+   	bool operator-(const Money &rhs) const{
    		return all_cents - rhs.all_cents;
    	}
    	

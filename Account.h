@@ -35,8 +35,6 @@ public:
    		<< "Number of Deposits:"<< account.numDeposit << std::endl
    		<<"-------------------"<< std::endl;
    		
-   		
-   		
    		return os;
    	}
  
