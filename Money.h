@@ -11,6 +11,7 @@
 
 class Money
 {
+	friend class Account;
 	int m_dollars;
 	int m_cents;
 	int all_cents = 100*m_dollars+m_cents;
@@ -20,30 +21,30 @@ public:
 	Money(const int &dollars, const int &cents);
    	
    	//Relational Overloads
-   	bool operator<(const Money &rhs) const{
+   	bool operator<(const Money& rhs) const{
    		return all_cents < rhs.all_cents;
    	}
-   	bool operator>(const Money &rhs) const{
+   	bool operator>(const Money& rhs) const{
    		return all_cents > rhs.all_cents;
    	}
-   	bool operator<=(const Money &rhs) const{
+   	bool operator<=(const Money& rhs) const{
    		return all_cents <= rhs.all_cents;
    	}
-	bool operator>=(const Money &rhs) const{
+	bool operator>=(const Money& rhs) const{
    		return all_cents >= rhs.all_cents;
    	}
-   	bool operator!=(const Money &rhs) const{
+   	bool operator!=(const Money& rhs) const{
    		return all_cents != rhs.all_cents;
    	}
-   	bool operator==(const Money &rhs) const{
+   	bool operator==(const Money& rhs) const{
    		return all_cents == rhs.all_cents;
    	}
    	
    	//Math Overloads
-   	bool operator+(const Money &rhs) const{
+   	bool operator+(const Money& rhs) const{
    		return all_cents + rhs.all_cents;
    	}
-   	bool operator-(const Money &rhs) const{
+   	bool operator-(const Money& rhs) const{
    		return all_cents - rhs.all_cents;
    	}
    	

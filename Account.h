@@ -13,17 +13,28 @@
 class Account
 {
 	std::vector<Money> money;
-
+	std::vector<Money> withdraw;
+	std::vector<Money> deposit;
+	 int numDeposit = 0;
+	 int numWithdraw = 0;
+	int i = 0;
 public:
 	Account(const Money& obj);
 	void makeDeposit(const Money& obj);
 	void makeWithdrawals(const Money& obj);
 	
+	
+	
 	//Overload 
-	friend std::ostream &operator<<(std::ostream &os, const Account &account){
+	
+	 friend std::ostream &operator<<(std::ostream &os, const Account &account){
    		os << "Account Details" << std::endl
    		<< "--------------------------" << std::endl
-   		<< "Current Balance: " << "add money obj here";
+   		<< "Current Balance: " << account.money[0] << std::endl
+   		<< "--------------------------" << std::endl
+   		<< "Number of Deposits:"<< account.numDeposit << std::endl
+   		<<"-------------------"<< std::endl;
+   		
    		
    		
    		return os;
