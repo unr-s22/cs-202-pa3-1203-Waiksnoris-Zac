@@ -11,14 +11,34 @@
 
 class Money
 {
-	friend class Account;
+	
 	int m_dollars;
 	int m_cents;
 	int all_cents = 100*m_dollars+m_cents;
 
+	
 public:
+	
+	
+	
 	Money();
 	Money(const int &dollars, const int &cents);
+   	friend class Account;
+	
+	
+
+   	Money operator+(const Money& rhs){
+   		Money total;
+   		total.all_cents = all_cents + rhs.all_cents;
+   		return total;
+   	}
+  	Money operator-(const Money& rhs){
+   		Money total;
+   		total.all_cents = all_cents - rhs.all_cents;
+   		return total;
+   	}
+   	
+   	
    	
    	//Relational Overloads
    	bool operator<(const Money &rhs) const{
@@ -41,12 +61,16 @@ public:
    	}
    	
    	//Math Overloads
+   	
    	bool operator+(const Money &rhs) const{
    		return all_cents + rhs.all_cents;
    	}
    	bool operator-(const Money &rhs) const{
    		return all_cents - rhs.all_cents;
    	}
+   	
+   		
+   	
    	
    	//Overload Stream Operator
    	friend std::ostream &operator<<(std::ostream &os, const Money &money){
