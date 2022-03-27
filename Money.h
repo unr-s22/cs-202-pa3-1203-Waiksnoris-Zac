@@ -7,6 +7,8 @@
 #define CODE_MONEY_H
 
 #include <iostream>
+#include <iomanip>
+#include <vector>
 
 
 class Money
