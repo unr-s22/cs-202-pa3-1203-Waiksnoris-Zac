@@ -18,9 +18,7 @@ class Money
 
 	
 public:
-	
-	
-	
+
 	Money();
 	Money(const int &dollars, const int &cents);
    	friend class Account;

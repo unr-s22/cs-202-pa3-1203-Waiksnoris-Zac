@@ -17,26 +17,30 @@ class Account
 	std::vector<Money> deposit;
 	int numDeposit = 0;
 	int numWithdraw = 0;
-	int i = 0; 
-
+	int numDeposit2 = 0;
+	int numWithdraw2 = 0;
+	int numMon = 0; 
+	bool reCalc = false;
+	
 public:
-	
-	
-	
 
-	friend class Money;
 	Account(const Money& obj);
 	void makeDeposit(const Money& obj);
 	void makeWithdrawals(const Money& obj);
 	void checkBal();
+	void CalculateBalance();
 	
 	//Overload 
-	
-	
-	  friend std::ostream &operator<<(std::ostream &os, const Account &account){
+	  friend std::ostream &operator<<(std::ostream &os, Account &account){
+   		
+   		if(account.reCalc == true){
+   			account.CalculateBalance();
+   			account.reCalc = false;
+   		}
+   			
    		os << "Account Details" << std::endl
    		<< "--------------------------" << std::endl
-   		<< "Current Balance: " << account.money[0] << std::endl
+   		<< "Current Balance: " << account.money[account.money.size()-1] << std::endl
    		<< "--------------------------" << std::endl
    		<< "Number of Deposits: "<< account.numDeposit << std::endl
    		<<"-------------------"<< std::endl;
@@ -48,7 +52,7 @@ public:
    		<< "--------------------------" << std::endl;
    		for (int i=0; i<account.numWithdraw; i++){
    		os << "(" << i+1 << ") " << account.withdraw[i] << std::endl;
-   			};
+   		};
    		
    		return os;
    	}
